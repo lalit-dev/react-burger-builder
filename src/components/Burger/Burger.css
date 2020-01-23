@@ -12,7 +12,13 @@
 
 @media (min-width: 500px) and (min-height: 400px) {
         .Burger {
-            width: 600px; 
+            width: 450px; 
             height: 350px;
         }
+}
+
+@media (max-height: 400px)  {
+    .Burger {
+        height: 70vh;
+    }
 }
