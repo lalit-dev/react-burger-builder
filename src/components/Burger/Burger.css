@@ -10,15 +10,15 @@
 }
 
 
-@media (min-width: 500px) and (min-height: 400px) {
+@media (min-width: 600px) and (min-height: 400px) {
         .Burger {
-            width: 450px; 
-            height: 350px;
+            width: 500px; 
+            height: 200px;
         }
 }
 
-@media (max-height: 400px)  {
+@media (min-height: 400px)  {
     .Burger {
-        height: 70vh;
+        height: 60vh;
     }
 }

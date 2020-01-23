@@ -8,10 +8,10 @@ import classes from "./BurgerIngredients.css"
 class BurgerIngredients extends Component    {
     render() {
         let ingredients = null;
-        console.log("TYPE = ", this.props.type);
+        // console.log("TYPE = ", this.props.type);
         switch(this.props.type){
             case('bread-bottom'):
-                console.log("this.props.type = ", this.props.type);
+                // console.log("this.props.type = ", this.props.type);
                 ingredients = <div className = {classes.BreadBottom}></div>
                 break;
             case('bread-top'):
@@ -40,7 +40,7 @@ class BurgerIngredients extends Component    {
     
     
         }
-        console.log(ingredients)
+        // console.log(ingredients)
         return ingredients;
 
     }
