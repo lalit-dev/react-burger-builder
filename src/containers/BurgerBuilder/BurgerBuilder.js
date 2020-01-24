@@ -20,7 +20,7 @@ class BurgerBuilder extends Component {
             bacon: 0,
             salad: 0
         },
-        totalPrice: 0
+        totalPrice: 4
     }
 
     addIngredients = (type) => {
@@ -50,7 +50,7 @@ class BurgerBuilder extends Component {
             this.setState((prevState, prevProps) => {
                 console.log("[removeIngredients] updating state", prevState);
                 return {
-                    totalPrice: prevState.totalPrice - ingredientsPrice[type],
+                    totalPrice: (prevState.totalPrice - ingredientsPrice[type]),
                     ingredients: {...prevState.ingredients, [type]: prevState.ingredients[type] - 1}
     
                 }
@@ -73,6 +73,7 @@ class BurgerBuilder extends Component {
                     addIngredients = {this.addIngredients}
                     removeIngredients = {this.removeIngredients}
                     disabledInfo = {disabledInfo}
+                    price = {this.state.totalPrice.toFixed(2)}
                 />
             </Aux>
         );
