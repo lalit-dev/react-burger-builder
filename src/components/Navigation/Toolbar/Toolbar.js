@@ -3,13 +3,17 @@ import  React from "react";
 import classes from "./Toolbar.css";
 import Logo from "./../../Logo/Logo";
 import NavigationItems from "./../NavigationItems/NavigationItems";
+import DrawerToggle from "./../SideDrawer/DrawerToggle/DrawerToggle";
 
 const toolbar = (props) => {
+    console.log("[toolbar] PROPS", props);
     return (
         <header className = {classes.Toolbar}>
-            <div>Menu</div>
-            <Logo />
-            <nav>
+            <DrawerToggle toggleDrawer = {props.toggleDrawer}/>
+            <div className = {classes.Logo}>
+                <Logo />
+            </div>
+            <nav className = {classes.DesktopOnly}>
                 <NavigationItems />
             </nav>
 
@@ -17,4 +21,4 @@ const toolbar = (props) => {
     )
 }
 
-export default toolbar
+export default toolbar;
