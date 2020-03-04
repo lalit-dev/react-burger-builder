@@ -1,8 +1,7 @@
-import React, {Component} from "react";
+import React from "react";
 
 import classes from "./Burger.css"
 
-import Aux from "../../hoc/auxiliary";
 import BurgerIngredients from "./BurgerIngredients/BurgerIngredients"
 
 const burger = (props) => {
